@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: url(https://i.pinimg.com/736x/a1/21/77/a12177d77ae4a9487a9cd41737d685e5.jpg);
+  background-size: cover;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  text-align: center;
+  background: #0a1729;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 10px 10px 7px black;
+}
+
+h1 {
+  text-align: left;
+  margin-left: 5px;
+  color: #30fba6;
+  margin-bottom: 10px;
+}
+
+form {
+  color: white;
+}
+
+form div input {
+  background: #3d404a;
+  color: white;
+  outline: none;
+  border-radius: 10px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 300px;
+  border: none;
+}
+
+input::placeholder {
+  color: #b5b9c1;
+}
+
+form button {
+  background: #30fba6;
+  color: black;
+  font-size: 18px;
+  font-weight: 900;
+  height: 40px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  border-top: 4px solid #357f60;
+  border-left: none;
+  border-right: 4px solid #357f60;
+  border-bottom: none;
+}
+
+.forgot {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.forgot a {
+  color: white;
+  text-decoration: none;
+}
+
+.account {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.account span {
+  color: #30fba6;
+  cursor: pointer;
+}
