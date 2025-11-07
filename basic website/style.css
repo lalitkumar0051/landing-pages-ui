@@ -1,0 +1,209 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0 50px;
+}
+
+nav {
+  /* height: 50px; */
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  /* background-color: aqua; */
+}
+
+.intro {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* background-color: red; */
+}
+
+.img img {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.links a {
+  text-decoration: none;
+  padding-left: 30px;
+  color: black;
+}
+
+main {
+  /* background-color: red; */
+  text-align: center;
+}
+
+.hero {
+  /* background: yellow; */
+  padding: 20px;
+  /* margin: 20px; */
+  /* text-align: center; */
+  /* background: red; */
+}
+
+.hero h1 {
+  padding: 20px;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.hero p {
+  /* padding: 10px; */
+  color: grey;
+}
+
+hr {
+  color: red;
+}
+
+.content {
+  /* padding: 20px; */
+  margin-top: 30px;
+  /* background-color: green; */
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.content-1 {
+  border: 1px solid black;
+  width: 100%;
+  text-align: start;
+  /* padding: 10px; */
+  /* background-color: yellow; */
+}
+
+.content-1 h3 {
+  padding-left: 10px;
+}
+
+.project {
+  /* background: red; */
+  padding: 10px;
+  /* margin: 5px; */
+}
+
+.content-2 {
+  /* padding-left: 10px; */
+  border: 1px solid black;
+  width: 100%;
+  text-align: start;
+  /* background-color: blue; */
+}
+
+#work-exp {
+  padding: 10px;
+}
+
+.exp {
+  padding: 10px;
+}
+
+.exp a {
+  color: blue;
+  text-decoration: none;
+}
+
+.content-3 {
+  border: 1px solid black;
+  width: 100%;
+  text-align: start;
+  /* background-color: aqua; */
+}
+
+#edu {
+  padding-left: 10px;
+}
+
+.cont {
+  margin: 20px;
+}
+
+ul {
+  /* list-style-type: none; */
+  float: left;
+  /* border: 2px solid red; */
+  /* background-color: yellow; */
+}
+
+.review-section {
+  padding: 20px 0;
+  text-align: start;
+  /* background-color: red; */
+}
+
+/* .review-section h2 {
+  background: red;
+} */
+
+.comments {
+  padding-top: 20px;
+  padding-left: 20px;
+  gap: 50px;
+  display: flex;
+  justify-content: flex-start;
+  /* background-color: yellow; */
+}
+
+.com {
+  border: 2px solid black;
+  text-align: start;
+  width: 200px;
+  border-radius: 20px;
+  padding: 10px;
+  /* background-color: blue; */
+}
+
+.com p {
+  color: grey;
+}
+
+footer {
+  margin-top: 20px;
+  /* background: red; */
+  padding: 20px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  .intro {
+    flex-direction: column;
+  }
+
+  .links a {
+    padding-left: 0px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .comments {
+    flex-direction: column;
+  }
+}

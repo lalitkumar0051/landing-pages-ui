@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #212121;
+        }
+
+        h1 {
+            color: red;
+            text-shadow: 3px 3px 1px blue;
+        }
+
+        .main {
+            height: 400px;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 10px 10px 2px blue;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: red;
+            margin: auto;
+        }
+
+        .main .sign {
+            border-radius: 10px;
+            box-shadow: 5px 5px blue;
+            /* box-shadow: 5px 5px rgba(0, 0, 0, 0.2); */
+            color: black;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+            background-color: orange;
+            transition: all 0.3s ease;
+        }
+
+        .sign:hover {
+            box-shadow: 10px 10px black;
+            /* box-shadow: 10px 15px rgba(0, 0, 0, 1); */
+            transform: translateZ(-10px);
+        }
+
+        #result {
+            color: black;
+            background-color: antiquewhite;
+            box-shadow: 5px 5px 1px blue;
+            text-align: center;
+            line-height: 50px;
+            height: 50px;
+            width: 50%;
+            margin: 40px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Snake Water Gun</h1>
+    <div class="main">
+        <div class="sign" id="Snake">Snake</div>
+        <div class="sign" id="Water">Water</div>
+        <div class="sign" id="Gun">Gun</div>
+    </div>
+
+    <div id="result">try</div>
+    <script>
+        let gameArr = ['Snake', 'Water', 'Gun']
+        let selectedValue = document.querySelectorAll('.sign');
+        let res = document.querySelector("#result");
+
+        // selectedValue.forEach((sign) => {
+        //     sign.addEventListener("click", () => {
+        //         console.log(sign);
+        //     })
+        // })
+
+
+        selectedValue.forEach((sign) => {
+            sign.addEventListener("click", () => {
+                const randomIndex = Math.floor(Math.random() * gameArr.length);
+                const randomChoice = gameArr[randomIndex];
+                console.log(randomChoice);
+                console.log(sign);
+
+                const userChoice = sign.getAttribute("id")
+                console.log(userChoice);
+
+                if (userChoice === randomChoice) {
+                    res.innerHTML = 'it is a tie'
+
+                } else if (userChoice === "Snake" && randomChoice === "Water" ||
+                    userChoice === "Water" && randomChoice === "Gun" ||
+                    userChoice === "Gun" && randomChoice === "Snake") {
+                    res.innerHTML = `yo you win!, Computer Chose: ${randomChoice}`
+                }
+                else {
+                    res.innerHTML = `ahha you lose! Computer Chose: ${randomChoice}`
+
+                }
+
+
+            })
+        })
+
+
+
+    </script>
+</body>
+
+</html>
